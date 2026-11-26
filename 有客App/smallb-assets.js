@@ -27,7 +27,7 @@ pages.me=()=>sbBaseMe().replace('</section>',"</section><button class='sb-me-ent
 
 SB.desc={房源:'',小区:'',图片:'',视频:''};SB.mediaContext='';SB.uploadContext='素材库上传';SB.communityOptions=[{name:'河西花园',district:'建邺区',block:'河西中部',aliases:['河西花园一期']},{name:'中央公园',district:'建邺区',block:'河西南部',aliases:['中央公园小区']},{name:'万科东方传奇',district:'雁塔区',block:'曲江二期',aliases:['东方传奇']}];
 const sbTime=()=>new Date().toLocaleString('zh-CN',{month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit'});
-SB.assets.forEach((a,i)=>{a.time=['11-17 09:42','11-17 09:31','11-17 08:02','11-16 17:20'][i];a.thumb=['thumb-living.jpg','thumb-video.jpg','thumb-community.jpg','thumb-skyline.jpg'][i]});
+SB.assets.forEach((a,i)=>{a.time=['11-17 09:42','11-17 09:31','11-17 08:02','11-16 17:20'][i];a.thumb=[appMedia('thumb-living.jpg'),appMedia('thumb-video.jpg'),appMedia('thumb-community.jpg'),appMedia('thumb-skyline.jpg')][i]});
 // The browser prototype reads the selected file itself. Native App integrations also read
 // available photo/video metadata from the system media asset and original file.
 SB.assets.forEach((a,i)=>{a.fileMeta=[

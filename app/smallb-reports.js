@@ -372,7 +372,7 @@ function sbSentMessageMarkup(message){
   }
   const state=message.kind==='report'?(message.reportStatus||'sent'):'sent';
   const copy=state==='updating'?'正在更新报告内房源信息…':state==='sending'?'发送中…':state==='failed'?'发送失败，请稍后重新选择报告发送':'';
-  const status=message.kind==='report'?(copy?'<div class="sb-report-send-state" role="status">'+(['updating','sending'].includes(state)?'<span class="sb-report-loading" aria-hidden="true"></span>':'')+copy+'</div>':''):'<div class="delivery-state">已发送</div>';
+  const status=message.kind==='report'?(copy?'<div class="sb-report-send-state message-send-status" role="status">'+(['updating','sending'].includes(state)?'<span class="sb-report-loading message-send-spinner" aria-hidden="true"></span>':'')+copy+'</div>':''):'<div class="delivery-state">已发送</div>';
   return '<div class="message-row me '+(['updating','sending'].includes(state)?'sb-report-message-pending':'')+'" data-sb-sent="'+message.id+'"><span class="real-avatar a2 sm"></span><div class="message-body"><div class="message-meta"><b>我</b><span>'+message.time+'</span></div><div class="sb-sent-content" aria-label="'+(state==='sent'?'已发送':'待发送')+label+'">'+content+'</div>'+status+'</div></div>';
 
 }

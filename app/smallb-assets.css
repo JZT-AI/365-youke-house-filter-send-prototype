@@ -126,3 +126,7 @@
 .sb-chat-composer{height:auto!important;min-height:100px;display:flex;flex-direction:column}
 .sb-chat-composer .sb-chat-shortcuts{position:relative;z-index:6;flex:0 0 auto}
 .sb-chat-composer .composer.chat-only{position:static!important;transform:none;margin:0;flex:0 0 auto}
+
+/* House and report cards share the message-level processing status. */
+.message-body>.message-send-status{display:flex;align-items:center;gap:7px;margin:7px 0 0;padding:0;color:#a96c3f;font-size:12px;line-height:1.6;background:none;border:0}
+.message-send-status>.message-send-spinner{box-sizing:border-box;display:inline-block;flex:0 0 13px;width:13px;height:13px;border:2px solid #f4d2bb;border-top-color:#ed7139;border-radius:50%;animation:h-upload-spin .9s linear infinite}
